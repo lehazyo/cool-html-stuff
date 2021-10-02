@@ -1,0 +1,125 @@
+.flower-wrapper {
+  position: relative;
+}
+
+.circles-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.circle-text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110px;
+  height: 110px;
+  margin: -55px 0 0 -55px;
+  background-color: #fff;
+  border-radius: 100%;
+  border: 5px solid #999;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.circle-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.circle {
+  position: relative;
+  left: 0;
+  top: 0;
+  transition: 0.8s ease-in-out;
+  transform-origin: 0% 0%;
+}
+
+.circles-wrapper > .circle {
+  top: 100px;
+  left: 100px;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  box-shadow: inset 0 -5px 10px rgba(255, 255, 255, 0.5), 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.circle.no-dark-shadow::before {
+  box-shadow: inset 0 -5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.overlay-cutter > .circle {
+  top: -30px;
+  left: -30px;
+}
+
+.circle-text-wrapper:hover ~ .circles-wrapper .circle {
+  transform: rotate(-17.14deg);
+}
+
+.circle-text-wrapper:hover ~ .circles-wrapper > .circle {
+  left: 150px;
+  top: 150px;
+}
+
+.circle-text-wrapper:hover ~ .circles-wrapper .overlay-cutter > .circle {
+  top: 20px;
+  left: 20px;
+}
+
+.overlay-cutter {
+  position: absolute;
+  top: 130px;
+  left: 130px;
+  width: 150px;
+  height: 120px;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+  transition-delay: 0.2s;
+}
+
+.circle-text-wrapper:hover ~ .circles-wrapper .overlay-cutter {
+  opacity: 1;
+}
+
+.circle.red::before {
+  background-color: #ff3333;
+}
+
+.circle.orange::before {
+  background-color: #ffaa33;
+}
+
+.circle.yellow::before {
+  background-color: #ffff33;
+}
+
+.circle.green::before {
+  background-color: #33ff33;
+}
+
+.circle.light-blue::before {
+  background-color: #aaaaff;
+}
+
+.circle.blue::before {
+  background-color: #3333ff;
+}
+
+.circle.violet::before {
+  background-color: #ff33ff;
+}

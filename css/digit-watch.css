@@ -1,0 +1,221 @@
+.watches-comment {
+  text-align: center;
+  margin: 0 auto 20px auto;
+}
+
+.watches {
+  position: relative;
+  border: 20px solid #331111;
+  background: #000;
+  font-size: 0;
+  white-space: nowrap;
+  padding: 25% 0 0 0;
+}
+
+.time-blocks {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  transform: skew(-5deg);
+}
+
+.time-block {
+  width: 31.57%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.divider {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 2.63%;
+  height: 100%;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  padding-top: 100%;
+  left: 10%;
+  top: 31.5%;
+  background: #aa3333;
+  box-shadow: 0 2px 10px 5px rgba(255, 0, 0, 0.5);
+}
+
+.divider::after {
+  top: 63.15%;
+}
+
+.digit {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+}
+
+.digit-section {
+  position: absolute;
+  width: 60%;
+  transform-origin: 50% 50%;
+  box-shadow: 0 6px 20px 10px rgba(255, 0, 0, 0.5);
+  opacity: 1;
+  transition: 0.8s cubic-bezier(0, 0, 0, 1);
+}
+
+.digit-section::before,
+.digit-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.digit-section::before {
+  top: 0;
+  border-bottom: 5px solid #aa3333;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.digit-section::after {
+  top: 4px;
+  border-top: 10px solid #aa3333;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+
+.digit-section-middle::before {
+  top: -7px;
+  border-bottom: 8px solid #aa3333;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.digit-section-middle::after {
+  top: 0;
+  border-top: 8px solid #aa3333;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.digit-section-top {
+  top: 0;
+  left: 20%;
+}
+.digit-section-right {
+  width: 66%;
+  transform: rotate(90deg);
+  left: 52%;
+}
+.digit-section-middle {
+  top: 50%;
+  left: 20%;
+}
+.digit-section-bottom {
+  left: 20%;
+  top: 100%;
+  transform: rotate(180deg);
+}
+.digit-section-left {
+  width: 66%;
+  left: -18%;
+  transform: rotate(-90deg);
+}
+
+.digit-section-2 {
+  top: 26%;
+}
+.digit-section-3 {
+  top: 26%;
+}
+.digit-section-5 {
+  top: 74%;
+}
+.digit-section-6 {
+  top: 74%;
+}
+
+[data-digit="-"] .digit-section-1,
+[data-digit="-"] .digit-section-2,
+[data-digit="-"] .digit-section-3,
+[data-digit="-"] .digit-section-4,
+[data-digit="-"] .digit-section-5,
+[data-digit="-"] .digit-section-6,
+[data-digit="-"] .digit-section-7,
+[data-digit="0"] .digit-section-4,
+[data-digit="1"] .digit-section-1,
+[data-digit="1"] .digit-section-2,
+[data-digit="1"] .digit-section-4,
+[data-digit="1"] .digit-section-5,
+[data-digit="1"] .digit-section-7,
+[data-digit="2"] .digit-section-2,
+[data-digit="2"] .digit-section-6,
+[data-digit="3"] .digit-section-2,
+[data-digit="3"] .digit-section-5,
+[data-digit="4"] .digit-section-1,
+[data-digit="4"] .digit-section-5,
+[data-digit="4"] .digit-section-7,
+[data-digit="5"] .digit-section-3,
+[data-digit="5"] .digit-section-5,
+[data-digit="6"] .digit-section-3,
+[data-digit="7"] .digit-section-2,
+[data-digit="7"] .digit-section-4,
+[data-digit="7"] .digit-section-5,
+[data-digit="7"] .digit-section-7,
+[data-digit="9"] .digit-section-5 {
+  opacity: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .watches {
+    border-width: 10px;
+  }
+  
+  .time-blocks {
+    top: 8px;
+    right: 5px;
+    bottom: 7px;
+    left: 5px;
+  }
+  
+  .digit-section::before {
+    border-bottom: 3px solid #aa3333;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+  }
+
+  .digit-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2px;
+    border-top: 5px solid #aa3333;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+
+
+  .digit-section-middle::before {
+    top: -3px;
+    border-bottom: 4px solid #aa3333;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+  }
+  .digit-section-middle::after {
+    top: 0;
+    border-top: 4px solid #aa3333;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+  }
+  .digit-section {
+    box-shadow: 0 6px 10px 5px rgba(255, 0, 0, 0.5);
+  }
+}

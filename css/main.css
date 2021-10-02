@@ -1,0 +1,47 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main-wrapper {
+
+}
+
+.prikols-tabs {
+  text-align: center;
+  font-size: 0;
+  padding: 20px 0 20px 0;
+}
+
+.prikols-tab {
+  display: inline-block;
+  font-size: 16px;
+  padding: 4px 8px;
+  margin: 0 4px;
+  background-color: #eee;
+  border: 1px solid rgba(0, 0, 0, .1);
+  cursor: pointer;
+}
+
+.prikols-tab[data-open] {
+  background-color: #ccc;
+  border: 1px solid rgba(0, 0, 0, .2);
+  cursor: pointer;
+}
+
+.prikols-pages {
+
+}
+
+.prikols-page {
+  display: none;
+}
+
+.prikols-page[data-open] {
+  display: block;
+}
